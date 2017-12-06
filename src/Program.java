@@ -19,7 +19,7 @@ public class Program extends PApplet {
     public void setup() {
         this.background(0);
         stroke(0);
-        makeRandomNum(48, 655);
+        makeRandomNum(48, 635);
     }
 
     @Override
@@ -50,25 +50,22 @@ public class Program extends PApplet {
             this.rect(k * Constants.barWidth, Constants.barPosY - bar[k], Constants.barWidth, bar[k]);
         }
 
-        if(j < bar.length - i) {
-            System.out.println("j : " + j);
-        } else if(j == bar.length - i) {
+        if(j == bar.length - i) {
             j = 0;
             i++;
             if(i == bar.length - 1) {
                 i = 1;
             }
-            System.out.println("i : " + i);
         }
 
     }
 
     public void bubbleSort() {
         int temp;
-        /*if (bar[j] > bar[j + 1]) {
+        if (bar[j] > bar[j + 1]) {
             temp = bar[j];
             bar[j] = bar[j + 1];
             bar[j + 1] = temp;
-        }*/
+        }
     }
 }
